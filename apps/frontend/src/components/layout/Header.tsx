@@ -6,7 +6,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <a
-          href="#landing-foundation"
+          href="#hero"
           className="group inline-flex items-center gap-3"
           aria-label={`${siteConfig.name} - về đầu trang`}
         >

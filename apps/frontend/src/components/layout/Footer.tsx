@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
         <div>
           <a
-            href="#landing-foundation"
+            href="#hero"
             className="inline-flex items-center gap-3"
             aria-label={`${siteConfig.name} - về đầu trang`}
           >

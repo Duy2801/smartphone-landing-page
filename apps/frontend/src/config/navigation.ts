@@ -1,7 +1,7 @@
 export const mainNavigation = [
   {
     label: "Tổng quan",
-    href: "#landing-foundation",
+    href: "#hero",
   },
   {
     label: "Tính năng",
