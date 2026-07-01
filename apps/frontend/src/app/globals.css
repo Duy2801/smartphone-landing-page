@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --background: #f7f8fb;
+  --foreground: #10131a;
+  --surface: #ffffff;
+  --surface-muted: #eef1f7;
+  --surface-elevated: rgba(255, 255, 255, 0.86);
+  --border: #dce2ec;
+  --muted: #5d6678;
+  --muted-foreground: #7b8496;
+  --accent: #2563eb;
+  --accent-foreground: #ffffff;
+  --accent-soft: #dbeafe;
+  --ring: #60a5fa;
+  --glow: rgba(37, 99, 235, 0.22);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --background: #060914;
+    --foreground: #f5f7fb;
+    --surface: #0d1324;
+    --surface-muted: #141b2d;
+    --surface-elevated: rgba(13, 19, 36, 0.82);
+    --border: #243149;
+    --muted: #a8b0c2;
+    --muted-foreground: #7f8aa3;
+    --accent: #60a5fa;
+    --accent-foreground: #061121;
+    --accent-soft: rgba(96, 165, 250, 0.16);
+    --ring: #93c5fd;
+    --glow: rgba(96, 165, 250, 0.28);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at top left, var(--glow), transparent 34rem),
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(124, 58, 237, 0.16),
+      transparent 28rem
+    ),
+    linear-gradient(180deg, var(--background), var(--surface-muted));
+}
+
+::selection {
+  color: var(--accent-foreground);
+  background: var(--accent);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
