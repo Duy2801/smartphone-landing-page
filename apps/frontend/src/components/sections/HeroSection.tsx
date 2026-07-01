@@ -27,12 +27,16 @@ export function HeroSection() {
           <a
             className="inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:shadow-blue-500/30"
             href={product.primaryCta.href}
+            data-analytics="hero_cta_click"
+            data-analytics-label="primary"
           >
             {product.primaryCta.label}
           </a>
           <a
             className="inline-flex min-h-12 items-center justify-center rounded-full border border-border bg-surface px-6 text-sm font-semibold text-foreground transition hover:-translate-y-0.5 hover:border-accent"
             href={product.secondaryCta.href}
+            data-analytics="hero_cta_click"
+            data-analytics-label="secondary"
           >
             {product.secondaryCta.label}
           </a>

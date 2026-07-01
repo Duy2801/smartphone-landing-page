@@ -1,5 +1,6 @@
 import { mainNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import { ThemeToggle } from "@/components/interactive/ThemeToggle";
 
 export function Header() {
   return (
@@ -39,6 +40,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <a
             href="#newsletter"
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:shadow-blue-500/30"
@@ -47,7 +49,9 @@ export function Header() {
           </a>
         </div>
 
-        <details className="group relative md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+        <details className="group relative">
           <summary className="flex min-h-11 cursor-pointer list-none items-center justify-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-foreground marker:hidden">
             Menu
           </summary>
@@ -69,6 +73,7 @@ export function Header() {
             </a>
           </div>
         </details>
+        </div>
       </div>
     </header>
   );

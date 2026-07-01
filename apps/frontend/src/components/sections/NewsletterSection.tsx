@@ -3,6 +3,7 @@
 import { FormEvent, useId, useState } from "react";
 import { subscribeNewsletter } from "@/lib/newsletter";
 import { newsletterSchema } from "@/lib/schemas";
+import { trackEvent } from "@/lib/analytics";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -43,6 +44,7 @@ export function NewsletterSection() {
     setMessage(result.message);
 
     if (result.ok) {
+      trackEvent("newsletter_submit", { source: parsed.data.source });
       setEmail("");
       setConsent(false);
       setWebsite("");
