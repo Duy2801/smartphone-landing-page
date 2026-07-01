@@ -3,8 +3,10 @@ import { Header } from "@/components/layout/Header";
 import { CameraStory } from "@/components/sections/CameraStory";
 import { DesignShowcase } from "@/components/sections/DesignShowcase";
 import { FeatureBento } from "@/components/sections/FeatureBento";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PerformanceSection } from "@/components/sections/PerformanceSection";
+import { Specifications } from "@/components/sections/Specifications";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <CameraStory />
         <PerformanceSection />
         <DesignShowcase />
+        <Specifications />
+        <FinalCta />
       </main>
       <Footer />
     </>
