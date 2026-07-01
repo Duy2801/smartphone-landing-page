@@ -1,4 +1,5 @@
 export const product = {
+  id: "astra-x1",
   name: "Astra X1",
   eyebrow: "Smartphone AI cao cấp",
   headline: "Mỏng nhẹ hơn. Thông minh hơn. Sẵn sàng cho mọi khoảnh khắc.",
@@ -29,6 +30,25 @@ export const product = {
     },
   ],
 } as const;
+
+export const chatbotFaq = [
+  {
+    keywords: ["giá", "bao nhiêu", "chi phí"],
+    answer: "Astra X1 có giá dự kiến từ 18.990.000đ. Giá chính thức sẽ được công bố khi mở bán.",
+  },
+  {
+    keywords: ["pin", "sạc", "dung lượng"],
+    answer: "Máy có pin 5.000mAh và sạc nhanh, hướng tới thời lượng sử dụng trọn ngày.",
+  },
+  {
+    keywords: ["camera", "chụp ảnh", "video"],
+    answer: "Camera chính 108MP hỗ trợ AI Night Fusion, chân dung AI và quay video 4K chống rung.",
+  },
+  {
+    keywords: ["mở bán", "ra mắt", "khi nào"],
+    answer: "Bạn có thể đăng ký newsletter để nhận thông báo mở bán và ưu đãi sớm nhất.",
+  },
+] as const;
 
 export const cameraStory = [
   {

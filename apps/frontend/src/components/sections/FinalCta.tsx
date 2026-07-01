@@ -1,4 +1,5 @@
 import { product } from "@/config/product";
+import { ProductActions } from "@/components/interactive/ProductActions";
 
 export function FinalCta() {
   return (
@@ -44,6 +45,7 @@ export function FinalCta() {
               Ưu đãi demo: bảo hành 24 tháng, trả góp 0% và gói phụ kiện cao
               cấp cho người đăng ký sớm.
             </p>
+            <ProductActions />
           </div>
         </div>
       </div>

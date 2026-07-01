@@ -10,6 +10,7 @@ import { PerformanceSection } from "@/components/sections/PerformanceSection";
 import { Specifications } from "@/components/sections/Specifications";
 import { BehaviorTracker } from "@/components/interactive/BehaviorTracker";
 import { ScrollReveal } from "@/components/interactive/ScrollReveal";
+import { ChatWidget } from "@/components/interactive/ChatWidget";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       </main>
       <Footer />
       <BehaviorTracker />
+      <ChatWidget />
     </>
   );
 }
