@@ -4,8 +4,11 @@ import {
   ServiceUnavailableException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { GoogleGenAI } from '@google/genai';
+import { ApiError, GoogleGenAI } from '@google/genai';
 import { SALES_ASSISTANT_PROMPT } from '../knowledge/prompts/sales-assistant.prompt';
+
+const MAX_ATTEMPTS = 3;
+const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
 
 @Injectable()
 export class GeminiService {
@@ -32,31 +35,52 @@ export class GeminiService {
       );
     }
 
-    try {
-      const response = await this.client.models.generateContent({
-        model: this.model,
-        contents: input,
-        config: {
-          systemInstruction: SALES_ASSISTANT_PROMPT,
-          temperature: 0.25,
-          maxOutputTokens: 500,
-        },
-      });
+    let lastError: unknown;
 
-      const answer = response.text?.trim();
-      if (!answer) throw new Error('Gemini returned an empty response');
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+      try {
+        const response = await this.client.models.generateContent({
+          model: this.model,
+          contents: input,
+          config: {
+            systemInstruction: SALES_ASSISTANT_PROMPT,
+            temperature: 0.25,
+            maxOutputTokens: 500,
+          },
+        });
 
-      return answer;
-    } catch (error) {
-      if (error instanceof ServiceUnavailableException) throw error;
+        const answer = response.text?.trim();
+        if (!answer) throw new Error('Gemini returned an empty response');
 
-      this.logger.error(
-        'Gemini request failed',
-        error instanceof Error ? error.stack : undefined,
-      );
-      throw new ServiceUnavailableException(
-        'Trợ lý AI đang bận. Vui lòng thử lại sau.',
-      );
+        return answer;
+      } catch (error) {
+        lastError = error;
+        if (!this.isRetryable(error) || attempt === MAX_ATTEMPTS) break;
+
+        const delayMs = 500 * 2 ** (attempt - 1);
+        this.logger.warn(
+          `Gemini temporarily unavailable; retrying in ${delayMs}ms (${attempt}/${MAX_ATTEMPTS})`,
+        );
+        await this.delay(delayMs);
+      }
     }
+
+    this.logger.error(
+      'Gemini request failed after retries',
+      lastError instanceof Error ? lastError.stack : undefined,
+    );
+    throw new ServiceUnavailableException(
+      'Trợ lý AI đang quá tải. Vui lòng thử lại sau ít phút.',
+    );
+  }
+
+  private isRetryable(error: unknown): boolean {
+    return (
+      error instanceof ApiError && RETRYABLE_STATUS_CODES.has(error.status)
+    );
+  }
+
+  private delay(milliseconds: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
   }
 }

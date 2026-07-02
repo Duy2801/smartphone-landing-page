@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { product } from "@/config/product";
+import { ProductGallery } from "@/components/interactive/ProductGallery";
 
 export function HeroSection() {
   return (
@@ -71,34 +71,8 @@ export function HeroSection() {
 
       <div className="relative mx-auto flex w-full max-w-[38rem] items-center justify-center lg:justify-end">
         <div className="absolute inset-8 rounded-full bg-accent/20 blur-3xl" />
-        <div className="relative w-full rounded-[2.5rem] border border-border bg-white p-4 shadow-2xl shadow-violet-950/20 sm:p-6">
-          <div className="absolute -left-6 top-14 z-10 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-              Dung lượng
-            </p>
-            <p className="mt-1 text-lg font-semibold text-foreground">
-              {product.priceLabel}
-            </p>
-          </div>
-
-          <div className="absolute -right-5 bottom-14 z-10 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-              Màn hình
-            </p>
-            <p className="mt-1 text-lg font-semibold text-foreground">
-              6,3″ · 120Hz
-            </p>
-          </div>
-
-          <Image
-            src="/images/products/image1.png"
-            alt="iPhone 17 màu Tím Oải Hương, góc nhìn mặt trước và mặt sau"
-            width={1200}
-            height={1200}
-            className="h-auto w-full rounded-[1.75rem] object-contain"
-            sizes="(min-width: 1024px) 48vw, 90vw"
-            priority
-          />
+        <div className="relative w-full">
+          <ProductGallery />
         </div>
       </div>
     </section>
