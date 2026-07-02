@@ -12,14 +12,14 @@ export function Header() {
           aria-label={`${siteConfig.name} - về đầu trang`}
         >
           <span className="grid size-10 place-items-center rounded-2xl bg-foreground text-sm font-black tracking-tight text-background shadow-lg shadow-black/10 transition group-hover:-translate-y-0.5">
-            AX
+            17
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-sm font-semibold tracking-[0.24em] text-muted-foreground">
-              ASTRA
+              IPHONE
             </span>
             <span className="text-lg font-semibold tracking-[-0.04em]">
-              X1
+              17
             </span>
           </span>
         </a>
@@ -75,6 +75,7 @@ export function Header() {
         </details>
         </div>
       </div>
+      <div className="scroll-progress" aria-hidden="true" />
     </header>
   );
 }

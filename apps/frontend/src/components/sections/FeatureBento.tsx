@@ -4,7 +4,7 @@ export function FeatureBento() {
   return (
     <section
       id="features"
-      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
+      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-20 sm:px-8 lg:px-10 lg:py-32"
       aria-labelledby="features-title"
     >
       <div className="mx-auto max-w-3xl text-center">
@@ -18,9 +18,8 @@ export function FeatureBento() {
           Những nâng cấp được chọn lọc cho trải nghiệm hằng ngày.
         </h2>
         <p className="mt-5 text-pretty text-base leading-8 text-muted sm:text-lg">
-          Astra X1 tập trung vào những thứ người dùng thật sự cảm nhận được:
-          camera tốt hơn, màn hình mượt hơn, pin bền hơn và thao tác an toàn
-          hơn.
+          Từ màn hình ProMotion đến camera Dual Fusion, mỗi nâng cấp trên
+          iPhone 17 đều được tạo ra để bạn cảm nhận ngay trong từng thao tác.
         </p>
       </div>
 

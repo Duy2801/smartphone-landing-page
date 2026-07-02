@@ -29,6 +29,6 @@ export async function POST(request: Request) {
 
   return NextResponse.json({
     ok: true,
-    message: "Đăng ký thành công. Chúng tôi sẽ gửi thông tin Astra X1 sớm nhất!",
+    message: "Đăng ký thành công. Chúng tôi sẽ gửi thông tin iPhone 17 sớm nhất!",
   });
 }

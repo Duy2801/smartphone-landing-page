@@ -54,7 +54,7 @@ export function NewsletterSection() {
   return (
     <section
       id="newsletter"
-      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
+      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-20 sm:px-8 lg:px-10 lg:py-32"
       aria-labelledby="newsletter-title"
     >
       <div className="grid gap-8 overflow-hidden rounded-[2.5rem] border border-border bg-surface-elevated p-6 shadow-2xl shadow-blue-950/10 backdrop-blur sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-12">
@@ -66,11 +66,11 @@ export function NewsletterSection() {
             id="newsletter-title"
             className="max-w-2xl text-balance text-4xl font-semibold tracking-[-0.045em] text-foreground sm:text-5xl"
           >
-            Nhận tin mở bán, ưu đãi và bản cập nhật sản phẩm.
+            Nhận báo giá và ưu đãi iPhone 17 mới nhất.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-            Để lại email để nhận thông báo về thời điểm ra mắt Astra X1. Form
-            có kiểm tra dữ liệu ở cả trình duyệt và API route.
+            Để lại email để nhận tư vấn về dung lượng, màu sắc và chương trình
+            ưu đãi phù hợp với bạn.
           </p>
         </div>
 

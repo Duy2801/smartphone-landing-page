@@ -4,7 +4,7 @@ export function Specifications() {
   return (
     <section
       id="specifications"
-      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
+      className="mx-auto w-full max-w-7xl scroll-mt-28 px-5 py-20 sm:px-8 lg:px-10 lg:py-32"
       aria-labelledby="specifications-title"
     >
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
@@ -16,11 +16,11 @@ export function Specifications() {
             id="specifications-title"
             className="text-balance text-4xl font-semibold tracking-[-0.045em] text-foreground sm:text-5xl"
           >
-            Cấu hình flagship trong một thiết kế tinh gọn.
+            Mọi thông số quan trọng, rõ ràng trong một nơi.
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-muted sm:text-lg">
-            Các thông số bên dưới được trình bày bằng HTML semantic, dễ đọc
-            trên desktop và tự chuyển thành card gọn trên mobile.
+            Từ màn hình, chip A19 đến camera và pin — xem nhanh những gì tạo nên
+            trải nghiệm iPhone 17.
           </p>
         </div>
 

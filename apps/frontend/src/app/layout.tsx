@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Astra X1 - Smartphone AI thế hệ mới",
+        alt: "iPhone 17 - ProMotion 120Hz, camera 48MP và chip A19",
       },
     ],
   },

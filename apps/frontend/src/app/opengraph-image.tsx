@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/config/site";
 
-export const alt = "Astra X1 - Smartphone AI thế hệ mới";
+export const alt = "iPhone 17 - ProMotion 120Hz, camera 48MP và chip A19";
 export const size = {
   width: 1200,
   height: 630,
@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
               fontWeight: 700,
             }}
           >
-            Smartphone AI cao cấp
+            iPhone 17 · Mới
           </div>
           <h1
             style={{
@@ -59,7 +59,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.35,
             }}
           >
-            Camera AI, màn hình 120Hz, hiệu năng mạnh mẽ và pin dùng trọn ngày.
+            ProMotion 120Hz, camera 48MP Dual Fusion và sức mạnh của chip A19.
           </p>
         </div>
         <div

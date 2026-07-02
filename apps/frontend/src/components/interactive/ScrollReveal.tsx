@@ -1,13 +1,20 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 
 type ScrollRevealProps = {
   children: ReactNode;
   className?: string;
+  direction?: "up" | "left" | "right";
+  delay?: number;
 };
 
-export function ScrollReveal({ children, className = "" }: ScrollRevealProps) {
+export function ScrollReveal({
+  children,
+  className = "",
+  direction = "up",
+  delay = 0,
+}: ScrollRevealProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,7 +33,7 @@ export function ScrollReveal({ children, className = "" }: ScrollRevealProps) {
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -8%", threshold: 0.08 },
+      { rootMargin: "0px 0px -12%", threshold: 0.1 },
     );
 
     observer.observe(element);
@@ -37,6 +44,8 @@ export function ScrollReveal({ children, className = "" }: ScrollRevealProps) {
     <div
       ref={elementRef}
       className={`scroll-reveal ${isVisible ? "is-visible" : ""} ${className}`}
+      data-direction={direction}
+      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
     >
       {children}
     </div>

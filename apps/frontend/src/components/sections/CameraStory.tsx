@@ -1,40 +1,33 @@
+import Image from "next/image";
 import { cameraStory } from "@/config/product";
 
 export function CameraStory() {
   return (
     <section
       id="camera"
-      className="mx-auto grid w-full max-w-7xl scroll-mt-28 gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-24"
+      className="mx-auto grid w-full max-w-7xl scroll-mt-28 gap-12 px-5 py-20 sm:px-8 lg:min-h-[105svh] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:px-10 lg:py-32"
       aria-labelledby="camera-title"
     >
       <div className="lg:sticky lg:top-28 lg:self-start">
         <p className="mb-4 inline-flex rounded-full border border-border bg-accent-soft px-4 py-2 text-sm font-medium text-accent">
-          Camera Story
+          Camera iPhone 17
         </p>
         <h2
           id="camera-title"
           className="text-balance text-4xl font-semibold tracking-[-0.045em] text-foreground sm:text-5xl"
         >
-          Mỗi khung hình được xử lý như một câu chuyện.
+          Nhiều góc nhìn hơn cho câu chuyện của bạn.
         </h2>
         <p className="mt-5 text-pretty text-base leading-8 text-muted sm:text-lg">
-          Cụm camera AI của Astra X1 ưu tiên màu sắc tự nhiên, vùng sáng cân
-          bằng và chi tiết ổn định trong nhiều điều kiện chụp.
+          Hệ thống camera 48MP Dual Fusion linh hoạt từ ảnh phong cảnh, macro
+          đến chân dung 2x. Camera trước Center Stage giúp mọi người luôn vừa khung hình.
         </p>
 
         <div
           aria-hidden="true"
           className="mt-8 overflow-hidden rounded-[2rem] border border-border bg-surface-elevated p-4 shadow-2xl shadow-blue-950/10"
         >
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-600">
-            <div className="absolute left-8 top-8 size-24 rounded-full bg-white/80 blur-sm" />
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
-            <div className="absolute bottom-8 left-8 right-8 grid grid-cols-3 gap-3">
-              <div className="h-20 rounded-2xl bg-white/15 backdrop-blur" />
-              <div className="h-20 rounded-2xl bg-white/25 backdrop-blur" />
-              <div className="h-20 rounded-2xl bg-white/10 backdrop-blur" />
-            </div>
-          </div>
+          <Image src="/images/products/image5.png" alt="Tổng quan Ceramic Shield 2, camera trước Center Stage, ProMotion 120Hz, pin và chip A19 của iPhone 17" width={1200} height={1200} className="h-auto w-full rounded-[1.5rem]" sizes="(min-width: 1024px) 42vw, 90vw" />
         </div>
       </div>
 

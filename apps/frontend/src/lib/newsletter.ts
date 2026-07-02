@@ -31,6 +31,6 @@ export async function subscribeNewsletter(
   return {
     ok: true,
     message:
-      data?.message ?? "Đăng ký thành công. Cảm ơn bạn đã quan tâm Astra X1!",
+      data?.message ?? "Đăng ký thành công. Cảm ơn bạn đã quan tâm iPhone 17!",
   };
 }

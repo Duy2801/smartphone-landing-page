@@ -16,15 +16,15 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="overflow-clip">
         <HeroSection />
-        <ScrollReveal><FeatureBento /></ScrollReveal>
-        <ScrollReveal><CameraStory /></ScrollReveal>
-        <ScrollReveal><PerformanceSection /></ScrollReveal>
-        <ScrollReveal><DesignShowcase /></ScrollReveal>
-        <ScrollReveal><Specifications /></ScrollReveal>
-        <ScrollReveal><NewsletterSection /></ScrollReveal>
-        <ScrollReveal><FinalCta /></ScrollReveal>
+        <ScrollReveal direction="up"><FeatureBento /></ScrollReveal>
+        <ScrollReveal direction="left"><CameraStory /></ScrollReveal>
+        <ScrollReveal direction="up"><PerformanceSection /></ScrollReveal>
+        <ScrollReveal direction="right"><DesignShowcase /></ScrollReveal>
+        <ScrollReveal direction="left"><Specifications /></ScrollReveal>
+        <ScrollReveal direction="up"><NewsletterSection /></ScrollReveal>
+        <ScrollReveal direction="up"><FinalCta /></ScrollReveal>
       </main>
       <Footer />
       <BehaviorTracker />

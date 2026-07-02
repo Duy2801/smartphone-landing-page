@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { product } from "@/config/product";
 
 export function HeroSection() {
@@ -68,40 +69,36 @@ export function HeroSection() {
         </dl>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-[34rem] items-center justify-center lg:justify-end">
-        <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl" />
-        <div className="relative aspect-[0.82] w-[min(78vw,24rem)] rounded-[3rem] border border-border bg-surface-muted p-6 shadow-2xl shadow-blue-950/20">
-          <div className="absolute -left-6 top-14 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
+      <div className="relative mx-auto flex w-full max-w-[38rem] items-center justify-center lg:justify-end">
+        <div className="absolute inset-8 rounded-full bg-accent/20 blur-3xl" />
+        <div className="relative w-full rounded-[2.5rem] border border-border bg-white p-4 shadow-2xl shadow-violet-950/20 sm:p-6">
+          <div className="absolute -left-6 top-14 z-10 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-              Giá dự kiến
+              Dung lượng
             </p>
             <p className="mt-1 text-lg font-semibold text-foreground">
               {product.priceLabel}
             </p>
           </div>
 
-          <div className="absolute -right-5 bottom-20 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
+          <div className="absolute -right-5 bottom-14 z-10 hidden rounded-3xl border border-border bg-surface-elevated px-5 py-4 shadow-xl shadow-black/10 backdrop-blur sm:block">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-              Pin thông minh
+              Màn hình
             </p>
             <p className="mt-1 text-lg font-semibold text-foreground">
-              Trọn ngày
+              6,3″ · 120Hz
             </p>
           </div>
 
-          <div className="relative h-full rounded-[2.5rem] border-[12px] border-foreground bg-background p-3 shadow-2xl shadow-black/25">
-            <div className="mx-auto mb-5 h-2 w-20 rounded-full bg-muted-foreground/35" />
-            <div className="grid h-[calc(100%-1.75rem)] gap-3">
-              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-500 via-violet-500 to-cyan-400">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.55),transparent_24%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.18),transparent_28%)]" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-3xl bg-surface" />
-                <div className="rounded-3xl bg-surface" />
-              </div>
-              <div className="rounded-3xl bg-surface" />
-            </div>
-          </div>
+          <Image
+            src="/images/products/image1.png"
+            alt="iPhone 17 màu Tím Oải Hương, góc nhìn mặt trước và mặt sau"
+            width={1200}
+            height={1200}
+            className="h-auto w-full rounded-[1.75rem] object-contain"
+            sizes="(min-width: 1024px) 48vw, 90vw"
+            priority
+          />
         </div>
       </div>
     </section>

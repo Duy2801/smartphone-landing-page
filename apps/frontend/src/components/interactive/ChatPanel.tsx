@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import { chatbotFaq } from "@/config/product";
 
 const welcomeMessage =
-  "Chào bạn! Mình có thể tư vấn nhanh về giá, pin, camera hoặc thời gian mở bán Astra X1.";
+  "Chào bạn! Mình có thể tư vấn nhanh về giá, màn hình, pin hoặc camera của iPhone 17.";
 
 export function ChatPanel({ onClose }: { onClose: () => void }) {
   const [question, setQuestion] = useState("");
@@ -28,11 +28,11 @@ export function ChatPanel({ onClose }: { onClose: () => void }) {
   return (
     <section
       className="fixed bottom-24 right-4 z-[70] w-[min(calc(100vw-2rem),23rem)] overflow-hidden rounded-[2rem] border border-border bg-surface shadow-2xl shadow-black/20 sm:right-6"
-      aria-label="Trợ lý tư vấn Astra"
+      aria-label="Trợ lý tư vấn iPhone 17"
     >
       <header className="flex items-center justify-between border-b border-border bg-foreground px-5 py-4 text-background">
         <div>
-          <p className="font-semibold">Astra Assistant</p>
+          <p className="font-semibold">iPhone 17 Assistant</p>
           <p className="text-xs text-background/65">Trả lời FAQ tự động</p>
         </div>
         <button

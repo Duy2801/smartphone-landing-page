@@ -12,21 +12,20 @@ export function Footer() {
             aria-label={`${siteConfig.name} - về đầu trang`}
           >
             <span className="grid size-11 place-items-center rounded-2xl bg-foreground text-sm font-black tracking-tight text-background">
-              AX
+              17
             </span>
             <span>
               <span className="block text-lg font-semibold tracking-[-0.04em]">
                 {siteConfig.name}
               </span>
               <span className="text-sm text-muted">
-                Smartphone AI thế hệ mới
+                Mượt mà. Mạnh mẽ. Đầy sắc màu.
               </span>
             </span>
           </a>
           <p className="mt-5 max-w-xl text-sm leading-7 text-muted">
-            Landing page demo cho sản phẩm công nghệ: tối ưu giao diện,
-            responsive, SEO Technical và sẵn sàng mở rộng form/webhook,
-            animation, mini commerce, chatbot.
+            Khám phá iPhone 17 với ProMotion 120Hz, camera 48MP Dual Fusion,
+            chip A19 và nhiều tính năng hữu ích cho mỗi ngày.
           </p>
         </div>
 
