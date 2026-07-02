@@ -1,5 +1,6 @@
 import { footerNavigation, mainNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import { AppleLogo } from "@/components/ui/AppleLogo";
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
             aria-label={`${siteConfig.name} - về đầu trang`}
           >
             <span className="grid size-11 place-items-center rounded-2xl bg-foreground text-sm font-black tracking-tight text-background">
-              17
+              <AppleLogo className="size-5" />
             </span>
             <span>
               <span className="block text-lg font-semibold tracking-[-0.04em]">

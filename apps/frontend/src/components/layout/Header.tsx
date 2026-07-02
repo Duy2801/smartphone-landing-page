@@ -1,6 +1,7 @@
 import { mainNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 import { ThemeToggle } from "@/components/interactive/ThemeToggle";
+import { AppleLogo } from "@/components/ui/AppleLogo";
 
 export function Header() {
   return (
@@ -12,14 +13,11 @@ export function Header() {
           aria-label={`${siteConfig.name} - về đầu trang`}
         >
           <span className="grid size-10 place-items-center rounded-2xl bg-foreground text-sm font-black tracking-tight text-background shadow-lg shadow-black/10 transition group-hover:-translate-y-0.5">
-            17
+            <AppleLogo className="size-5" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-sm font-semibold tracking-[0.24em] text-muted-foreground">
-              IPHONE
-            </span>
-            <span className="text-lg font-semibold tracking-[-0.04em]">
-              17
+              IPHONE  17
             </span>
           </span>
         </a>
@@ -51,28 +49,28 @@ export function Header() {
 
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
-        <details className="group relative">
-          <summary className="flex min-h-11 cursor-pointer list-none items-center justify-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-foreground marker:hidden">
-            Menu
-          </summary>
-          <div className="absolute right-0 mt-3 w-64 overflow-hidden rounded-3xl border border-border bg-surface-elevated p-2 shadow-2xl shadow-black/15 backdrop-blur-xl">
-            {mainNavigation.map((item) => (
+          <details className="group relative">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center justify-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-foreground marker:hidden">
+              Menu
+            </summary>
+            <div className="absolute right-0 mt-3 w-64 overflow-hidden rounded-3xl border border-border bg-surface-elevated p-2 shadow-2xl shadow-black/15 backdrop-blur-xl">
+              {mainNavigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-muted transition hover:bg-accent-soft hover:text-accent"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={item.href}
-                href={item.href}
-                className="block rounded-2xl px-4 py-3 text-sm font-medium text-muted transition hover:bg-accent-soft hover:text-accent"
+                href="#newsletter"
+                className="mt-2 flex min-h-11 items-center justify-center rounded-2xl bg-accent px-4 text-sm font-semibold text-accent-foreground"
               >
-                {item.label}
+                Đăng ký nhận tin
               </a>
-            ))}
-            <a
-              href="#newsletter"
-              className="mt-2 flex min-h-11 items-center justify-center rounded-2xl bg-accent px-4 text-sm font-semibold text-accent-foreground"
-            >
-              Đăng ký nhận tin
-            </a>
-          </div>
-        </details>
+            </div>
+          </details>
         </div>
       </div>
       <div className="scroll-progress" aria-hidden="true" />

@@ -54,17 +54,14 @@ export function ProductActions() {
   const isReady = favoritesReady && cartReady;
 
   return (
-    <div className="mt-6 border-t border-background/15 pt-5">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-background/60">
-        Mini commerce
-      </p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+    <div className="mt-4 border-t border-white/10 pt-4">
+      <div className="grid gap-2 sm:grid-cols-2">
         <button
           type="button"
           onClick={toggleFavorite}
           disabled={!isReady}
           aria-pressed={isFavorite}
-          className="min-h-11 rounded-full border border-background/20 px-4 text-sm font-semibold transition hover:bg-background/10 disabled:opacity-60"
+          className="min-h-10 rounded-full border border-white/20 px-4 text-sm font-semibold transition hover:bg-white/10 disabled:opacity-60"
         >
           {isFavorite ? "♥ Đã yêu thích" : "♡ Yêu thích"}
         </button>
@@ -73,12 +70,12 @@ export function ProductActions() {
           onClick={toggleCart}
           disabled={!isReady}
           aria-pressed={isInCart}
-          className="min-h-11 rounded-full bg-background px-4 text-sm font-semibold text-foreground transition hover:-translate-y-0.5 disabled:opacity-60"
+          className="min-h-10 rounded-full bg-white px-4 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 disabled:opacity-60"
         >
           {isInCart ? "Đã thêm vào giỏ" : "Thêm vào giỏ"}
         </button>
       </div>
-      <p className="mt-3 min-h-5 text-xs text-background/65" aria-live="polite">
+      <p className="mt-2 min-h-4 text-xs text-white/45" aria-live="polite">
         {message || `Đã xem ${viewed.length || 1} sản phẩm trên thiết bị này.`}
       </p>
     </div>
