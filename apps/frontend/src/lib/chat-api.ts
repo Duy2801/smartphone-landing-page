@@ -1,7 +1,7 @@
 import type { ChatApiResponse, ChatMessage } from "@/types/chat";
 
 const API_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:3001/api/v1";
+  process.env.NEXT_PUBLIC_BACKEND_URL;
 
 type HistoryResponse = {
   messages: Array<{
