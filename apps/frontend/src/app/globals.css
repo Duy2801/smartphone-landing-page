@@ -92,6 +92,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Keep the desktop layout comfortable at 100% browser zoom. */
+@media (min-width: 64rem) {
+  html {
+    font-size: 80%;
+  }
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
