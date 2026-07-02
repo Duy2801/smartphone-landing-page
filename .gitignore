@@ -38,3 +38,6 @@ yarn-error.log*
 *.pem
 
 *.md
+
+# Runtime knowledge base required by the deployed backend
+!apps/backend/data/knowledge/*.md
